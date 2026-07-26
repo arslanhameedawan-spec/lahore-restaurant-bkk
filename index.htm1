@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lahore Restaurant Bangkok</title>
+
+  <meta name="description"
+
+        content="Authentic Pakistani and Indian cuisine in Bangkok. Visit Lahore Restaurant Silom or Chinatown.">
+
+  <style>
+
+    :root {
+
+      --green: #063d32;
+
+      --dark-green: #032a23;
+
+      --light-green: #0d5b4a;
+
+      --gold: #d8ad54;
+
+      --cream: #fff9ed;
+
+      --white: #ffffff;
+
+      --text: #1b302a;
+
+      --muted: #68746f;
+
+      --shadow: 0 18px 45px rgba(2, 45, 36, 0.15);
+
+    }
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+    body {
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      background: var(--cream);
+
+      color: var(--text);
+
+      line-height: 1.65;
+
+    }
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+    .container {
+
+      width: min(1120px, calc(100% - 32px));
+
+      margin: auto;
+
+    }
+
+    header {
+
+      position: fixed;
+
+      top: 0;
+
+      left: 0;
+
+      right: 0;
+
+      z-index: 100;
+
+      background: rgba(3, 42, 35, 0.95);
+
+      backdrop-filter: blur(12px);
+
+    }
+
+    nav {
+
+      min-height: 76px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      color: var(--white);
+
+    }
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      font-weight: 800;
+
+    }
+
+    .logo {
+
+      width: 54px;
+
+      height: 54px;
+
+      border: 3px solid var(--gold);
+
+      border-radius: 50%;
+
+      display: grid;
+
+      place-items: center;
+
+      color: var(--gold);
+
+      font-family: Georgia, serif;
+
+      font-size: 20px;
+
+      background: var(--green);
+
+    }
+
+    .nav-links {
+
+      display: flex;
+
+      gap: 22px;
+
+      font-weight: 700;
+
+      font-size: 14px;
+
+    }
+
+    .nav-links a:hover {
+
+      color: var(--gold);
+
+    }
+
+    .hero {
+
+      min-height: 100vh;
+
+      display: grid;
+
+      place-items: center;
+
+      color: var(--white);
+
+      padding: 115px 0 80px;
+
+      background:
+
+        radial-gradient(circle at 82% 20%, rgba(216, 173, 84, 0.28), transparent 22%),
+
+        radial-gradient(circle at 12% 85%, rgba(216, 173, 84, 0.17), transparent 28%),
+
+        linear-gradient(135deg, var(--dark-green), var(--green) 55%, var(--light-green));
+
+    }
+
+    .hero-content {
+
+      max-width: 850px;
+
+    }
+
+    .badge {
+
+      display: inline-block;
+
+      color: var(--gold);
+
+      border: 1px solid rgba(216, 173, 84, 0.6);
+
+      padding: 7px 13px;
+
+      border-radius: 999px;
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 25px;
+
+    }
+
+    h1 {
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(50px, 8vw, 92px);
+
+      line-height: 0.98;
+
+      letter-spacing: -3px;
+
+      margin-bottom: 25px;
+
+    }
+
+    .hero p {
+
+      max-width: 720px;
+
+      font-size: 20px;
+
+      color: #edf7f3;
+
+    }
+
+    .buttons {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 13px;
+
+      margin-top: 30px;
+
+    }
+
+    .button {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 14px 22px;
+
+      border-radius: 999px;
+
+      font-weight: 800;
+
+      transition: 0.2s;
+
+    }
+
+    .button:hover {
+
+      transform: translateY(-2px);
+
+    }
+
+    .button-gold {
+
+      background: var(--gold);
+
+      color: var(--dark-green);
+
+    }
+
+    .button-outline {
+
+      color: var(--white);
+
+      border: 1px solid rgba(255, 255, 255, 0.5);
+
+      background: rgba(255, 255, 255, 0.06);
+
+    }
+
+    .features-line {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 25px;
+
+    }
+
+    .feature-pill {
+
+      padding: 7px 12px;
+
+      border: 1px solid rgba(255, 255, 255, 0.26);
+
+      border-radius: 999px;
+
+      font-size: 14px;
+
+    }
+
+    section {
+
+      padding: 90px 0;
+
+    }
+
+    .section-label {
+
+      color: #a67722;
+
+      font-size: 13px;
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+    .section-title {
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      color: var(--green);
+
+      font-size: clamp(38px, 5vw, 62px);
+
+      line-height: 1.08;
+
+      margin: 10px 0 20px;
+
+    }
+
+    .section-text {
+
+      color: var(--muted);
+
+      max-width: 760px;
+
+      font-size: 17px;
+
+    }
+
+    .story-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.1fr 0.9fr;
+
+      gap: 50px;
+
+      align-items: center;
+
+    }
+
+    .story-copy p {
+
+      margin-bottom: 17px;
+
+      color: var(--muted);
+
+    }
+
+    .story-card {
+
+      min-height: 430px;
+
+      border-radius: 28px;
+
+      padding: 28px;
+
+      display: flex;
+
+      align-items: flex-end;
+
+      box-shadow: var(--shadow);
+
+      background:
+
+        radial-gradient(circle at 75% 20%, rgba(255,255,255,0.28), transparent 25%),
+
+        linear-gradient(135deg, #d9af59, #9f6a2d 48%, var(--green));
+
+    }
+
+    .story-note {
+
+      max-width: 310px;
+
+      padding: 21px;
+
+      border-radius: 18px;
+
+      color: var(--white);
+
+      background: rgba(3, 42, 35, 0.9);
+
+    }
+
+    .story-note strong {
+
+      display: block;
+
+      color: #f2d68e;
+
+      font-size: 22px;
+
+      margin-bottom: 5px;
+
+    }
+
+    .branches {
+
+      background: var(--green);
+
+      color: var(--white);
+
+    }
+
+    .branches .section-title {
+
+      color: var(--white);
+
+    }
+
+    .branches .section-text {
+
+      color: #dbe9e4;
+
+    }
+
+    .branch-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 26px;
+
+      margin-top: 42px;
+
+    }
+
+    .branch-card {
+
+      background: var(--white);
+
+      color: var(--text);
+
+      border-radius: 25px;
+
+      overflow: hidden;
+
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .branch-image {
+
+      height: 250px;
+
+      display: flex;
+
+      align-items: flex-end;
+
+      padding: 25px;
+
+      color: var(--white);
+
+      position: relative;
+
+    }
+
+    .silom {
+
+      background:
+
+        radial-gradient(circle at 30% 22%, #f3cc70, transparent 21%),
+
+        linear-gradient(135deg, #8d4f29, #c18037 50%, var(--green));
+
+    }
+
+    .chinatown {
+
+      background:
+
+        radial-gradient(circle at 75% 20%, #e2aa43, transparent 20%),
+
+        linear-gradient(135deg, #6f2023, #a14330 50%, var(--dark-green));
+
+    }
+
+    .branch-image h3 {
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 34px;
+
+    }
+
+    .branch-content {
+
+      padding: 28px;
+
+    }
+
+    .branch-content h3 {
+
+      color: var(--green);
+
+      font-size: 27px;
+
+      margin-bottom: 4px;
+
+    }
+
+    .branch-type {
+
+      color: #996d1c;
+
+      font-weight: 900;
+
+      margin-bottom: 12px;
+
+    }
+
+    .branch-content p {
+
+      color: var(--muted);
+
+    }
+
+    .branch-buttons {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-top: 20px;
+
+    }
+
+    .small-button {
+
+      padding: 11px 15px;
+
+      border-radius: 999px;
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+    }
+
+    .small-gold {
+
+      background: var(--gold);
+
+      color: var(--dark-green);
+
+    }
+
+    .small-outline {
+
+      border: 1px solid #cad5d0;
+
+      color: var(--green);
+
+    }
+
+    .menu-box {
+
+      padding: 48px;
+
+      border-radius: 30px;
+
+      color: var(--white);
+
+      display: grid;
+
+      grid-template-columns: 1fr auto;
+
+      gap: 25px;
+
+      align-items: center;
+
+      background: linear-gradient(125deg, var(--light-green), var(--dark-green));
+
+      box-shadow: var(--shadow);
+
+    }
+
+    .menu-box h2 {
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(35px, 5vw, 56px);
+
+      line-height: 1.08;
+
+      margin: 8px 0 12px;
+
+    }
+
+    .menu-box p {
+
+      color: #dce9e4;
+
+      max-width: 650px;
+
+    }
+
+    .benefits {
+
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 17px;
+
+      margin-top: 34px;
+
+    }
+
+    .benefit {
+
+      background: var(--white);
+
+      padding: 23px;
+
+      border-radius: 20px;
+
+      box-shadow: 0 12px 35px rgba(4, 55, 44, 0.08);
+
+    }
+
+    .benefit strong {
+
+      display: block;
+
+      color: var(--green);
+
+      font-size: 18px;
+
+      margin-bottom: 6px;
+
+    }
+
+    .benefit span {
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+    }
+
+    .contact {
+
+      background: linear-gradient(var(--cream), #f2e6cb);
+
+    }
+
+    .contact-grid {
+
+      display: grid;
+
+      grid-template-columns: 0.9fr 1.1fr;
+
+      gap: 28px;
+
+      margin-top: 35px;
+
+    }
+
+    .contact-card {
+
+      padding: 28px;
+
+      border-radius: 24px;
+
+      background: var(--white);
+
+      box-shadow: var(--shadow);
+
+    }
+
+    .contact-row {
+
+      padding: 14px 0;
+
+      border-bottom: 1px solid #edf0ee;
+
+    }
+
+    .contact-row:last-child {
+
+      border-bottom: 0;
+
+    }
+
+    .contact-row small {
+
+      display: block;
+
+      color: var(--muted);
+
+    }
+
+    .contact-row strong {
+
+      color: var(--green);
+
+    }
+
+    .quick-links {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 14px;
+
+    }
+
+    .quick-link {
+
+      min-height: 140px;
+
+      padding: 22px;
+
+      border-radius: 22px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      color: var(--white);
+
+      background: var(--green);
+
+    }
+
+    .quick-link.gold {
+
+      color: var(--dark-green);
+
+      background: var(--gold);
+
+    }
+
+    footer {
+
+      background: var(--dark-green);
+
+      color: #cbdbd5;
+
+      padding: 45px 0 25px;
+
+    }
+
+    .footer-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.4fr 1fr 1fr;
+
+      gap: 30px;
+
+    }
+
+    footer h4 {
+
+      color: var(--white);
+
+      margin-bottom: 10px;
+
+    }
+
+    footer a {
+
+      display: block;
+
+      margin: 5px 0;
+
+    }
+
+    .copyright {
+
+      margin-top: 30px;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(255,255,255,0.12);
+
+      font-size: 14px;
+
+    }
+
+    .floating-whatsapp {
+
+      position: fixed;
+
+      right: 18px;
+
+      bottom: 18px;
+
+      z-index: 150;
+
+      width: 58px;
+
+      height: 58px;
+
+      border-radius: 50%;
+
+      display: grid;
+
+      place-items: center;
+
+      color: var(--white);
+
+      background: #25d366;
+
+      font-size: 25px;
+
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+
+    }
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+
+        display: none;
+
+      }
+
+      .story-grid,
+
+      .branch-grid,
+
+      .contact-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .benefits {
+
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+      .menu-box {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .footer-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+      }
+
+    }
+
+    @media (max-width: 560px) {
+
+      section {
+
+        padding: 68px 0;
+
+      }
+
+      h1 {
+
+        font-size: 52px;
+
+      }
+
+      .buttons .button {
+
+        width: 100%;
+
+      }
+
+      .benefits,
+
+      .quick-links,
+
+      .footer-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .menu-box {
+
+        padding: 31px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="container">
+
+    <nav>
+
+      <a class="brand" href="#">
+
+        <span class="logo">LR</span>
+
+        <span>Lahore Restaurant Bangkok</span>
+
+      </a>
+
+      <div class="nav-links">
+
+        <a href="#story">Our Story</a>
+
+        <a href="#branches">Branches</a>
+
+        <a href="#menu">Menu</a>
+
+        <a href="#contact">Contact</a>
+
+      </div>
+
+    </nav>
+
+  </div>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+  <div class="container hero-content">
+
+    <div class="badge">Halal Dining • Bangkok</div>
+
+    <h1>Authentic flavours. Warm hospitality.</h1>
+
+    <p>
+
+      Experience genuine Pakistani cuisine, popular Indian favourites
+
+      and selected Thai dishes across our two welcoming Bangkok locations.
+
+    </p>
+
+    <div class="buttons">
+
+      <a class="button button-gold" href="#branches">
+
+        Choose Your Branch
+
+      </a>
+
+      <a class="button button-outline"
+
+         href="https://drive.google.com/drive/folders/1-QpjnvXQ3roslNOWqcL66gDSmFKV-L3s"
+
+         target="_blank">
+
+        View Full Menu
+
+      </a>
+
+    </div>
+
+    <div class="features-line">
+
+      <span class="feature-pill">Pakistani Cuisine</span>
+
+      <span class="feature-pill">Indian Cuisine</span>
+
+      <span class="feature-pill">Thai at Silom</span>
+
+      <span class="feature-pill">Family Friendly</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="story">
+
+  <div class="container story-grid">
+
+    <div class="story-copy">
+
+      <div class="section-label">Our Story</div>
+
+      <h2 class="section-title">
+
+        Born from faith, resilience and a love of Pakistani food.
+
+      </h2>
+
+      <p>
+
+        Lahore Restaurant began during the COVID-19 period, when businesses
+
+        across Thailand were facing difficult times.
+
+      </p>
+
+      <p>
+
+        Our family, already active through Hira Fashion Accessories Plaza
+
+        in Sampheng and Al-Barakah Goat Farm, saw a need for genuinely
+
+        authentic halal Pakistani food in Bangkok.
+
+      </p>
+
+      <p>
+
+        With trust in Allah and a desire to share Pakistan’s traditional
+
+        flavours and hospitality, Lahore Restaurant opened its doors.
+
+      </p>
+
+      <p>
+
+        The opening was inaugurated by H.E. Sahebzada Ahmed Khan,
+
+        then Ambassador of Pakistan to Thailand, with members of the
+
+        Thai-Pakistan business community and distinguished guests.
+
+      </p>
+
+    </div>
+
+    <div class="story-card">
+
+      <div class="story-note">
+
+        <strong>Our Opening Journey</strong>
+
+        Opening and branch photographs will be added here in the next update.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="branches" id="branches">
+
+  <div class="container">
+
+    <div class="section-label">Two Bangkok Locations</div>
+
+    <h2 class="section-title">
+
+      Choose your dining experience.
+
+    </h2>
+
+    <p class="section-text">
+
+      Call, get directions, or message your preferred branch directly
+
+      on WhatsApp for an order or table booking.
+
+    </p>
+
+    <div class="branch-grid">
+
+      <article class="branch-card">
+
+        <div class="branch-image silom">
+
+          <h3>Silom Branch</h3>
+
+        </div>
+
+        <div class="branch-content">
+
+          <h3>Lahore Restaurant Silom</h3>
+
+          <div class="branch-type">
+
+            Pakistani • Indian • Thai Cuisine
+
+          </div>
+
+          <p>
+
+            Authentic halal dining in Silom with Pakistani classics,
+
+            Indian favourites and selected Thai specialties.
+
+          </p>
+
+          <div class="branch-buttons">
+
+            <a class="small-button small-gold"
+
+               href="https://wa.me/66818753034?text=Hello%20Lahore%20Restaurant%20Silom!%20I%20would%20like%20to%20book%20a%20table%20or%20place%20an%20order."
+
+               target="_blank">
+
+              WhatsApp
+
+            </a>
+
+            <a class="small-button small-outline"
+
+               href="tel:+66818753034">
+
+              Call
+
+            </a>
+
+            <a class="small-button small-outline"
+
+               href="https://maps.app.goo.gl/nunE4MYtheBQ62ec8?g_st=ic"
+
+               target="_blank">
+
+              Directions
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="branch-card">
+
+        <div class="branch-image chinatown">
+
+          <h3>I'm Chinatown</h3>
+
+        </div>
+
+        <div class="branch-content">
+
+          <h3>Lahore Restaurant Chinatown</h3>
+
+          <div class="branch-type">
+
+            Authentic Pakistani & Indian Cuisine
+
+          </div>
+
+          <p>
+
+            Traditional Pakistani and Indian dishes prepared with
+
+            authentic recipes in a warm and welcoming setting.
+
+          </p>
+
+          <div class="branch-buttons">
+
+            <a class="small-button small-gold"
+
+               href="https://wa.me/66982658244?text=Hello%20Lahore%20Restaurant%20Chinatown!%20I%20would%20like%20to%20book%20a%20table%20or%20place%20an%20order."
+
+               target="_blank">
+
+              WhatsApp
+
+            </a>
+
+            <a class="small-button small-outline"
+
+               href="tel:+66982658244">
+
+              Call
+
+            </a>
+
+            <a class="small-button small-outline"
+
+               href="https://maps.app.goo.gl/VHsRYtz1sW4isk8YA?g_st=ic"
+
+               target="_blank">
+
+              Directions
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="menu">
+
+  <div class="container">
+
+    <div class="menu-box">
+
+      <div>
+
+        <div class="section-label">Digital Menu</div>
+
+        <h2>Explore our complete menu.</h2>
+
+        <p>
+
+          Browse our Pakistani, Indian and Thai selections and contact
+
+          your preferred branch directly through WhatsApp.
+
+        </p>
+
+      </div>
+
+      <a class="button button-gold"
+
+         href="https://drive.google.com/drive/folders/1-QpjnvXQ3roslNOWqcL66gDSmFKV-L3s"
+
+         target="_blank">
+
+        Open Menu
+
+      </a>
+
+    </div>
+
+    <div class="benefits">
+
+      <div class="benefit">
+
+        <strong>Halal Dining</strong>
+
+        <span>Welcoming local guests and international visitors.</span>
+
+      </div>
+
+      <div class="benefit">
+
+        <strong>Authentic Taste</strong>
+
+        <span>Traditional flavours inspired by Pakistani hospitality.</span>
+
+      </div>
+
+      <div class="benefit">
+
+        <strong>Family Friendly</strong>
+
+        <span>A comfortable setting for families, friends and groups.</span>
+
+      </div>
+
+      <div class="benefit">
+
+        <strong>Easy Booking</strong>
+
+        <span>Order food or book a table directly through WhatsApp.</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="section-label">Contact Us</div>
+
+    <h2 class="section-title">
+
+      Order, call or find your nearest branch.
+
+    </h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+
+        <div class="contact-row">
+
+          <small>Email</small>
+
+          <strong>
+
+            <a href="mailto:lahorerestaurantth@gmail.com">
+
+              lahorerestaurantth@gmail.com
+
+            </a>
+
+          </strong>
+
+        </div>
+
+        <div class="contact-row">
+
+          <small>Silom Phone & WhatsApp</small>
+
+          <strong>
+
+            <a href="tel:+66818753034">
+
+              +66 81-875-3034
+
+            </a>
+
+          </strong>
+
+        </div>
+
+        <div class="contact-row">
+
+          <small>Chinatown Phone & WhatsApp</small>
+
+          <strong>
+
+            <a href="tel:+66982658244">
+
+              +66 98-265-8244
+
+            </a>
+
+          </strong>
+
+        </div>
+
+        <div class="contact-row">
+
+          <small>Social Media</small>
+
+          <strong>
+
+            <a href="https://www.facebook.com/share/1Cp6n9mSFP/?mibextid=wwXIfr"
+
+               target="_blank">
+
+              Facebook
+
+            </a>
+
+            ·
+
+            <a href="https://www.tiktok.com/@lahorerestaurantbkk"
+
+               target="_blank">
+
+              TikTok @lahorerestaurantbkk
+
+            </a>
+
+          </strong>
+
+        </div>
+
+      </div>
+
+      <div class="quick-links">
+
+        <a class="quick-link"
+
+           href="https://wa.me/66818753034"
+
+           target="_blank">
+
+          <strong>WhatsApp Silom</strong>
+
+          <small>Order or book a table</small>
+
+        </a>
+
+        <a class="quick-link gold"
+
+           href="https://wa.me/66982658244"
+
+           target="_blank">
+
+          <strong>WhatsApp Chinatown</strong>
+
+          <small>Order or book a table</small>
+
+        </a>
+
+        <a class="quick-link gold"
+
+           href="https://maps.app.goo.gl/nunE4MYtheBQ62ec8?g_st=ic"
+
+           target="_blank">
+
+          <strong>Directions to Silom</strong>
+
+          <small>Open Google Maps</small>
+
+        </a>
+
+        <a class="quick-link"
+
+           href="https://maps.app.goo.gl/VHsRYtz1sW4isk8YA?g_st=ic"
+
+           target="_blank">
+
+          <strong>Directions to Chinatown</strong>
+
+          <small>Open Google Maps</small>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h4>Lahore Restaurant Bangkok</h4>
+
+        <p>
+
+          Authentic Pakistani hospitality in Bangkok.
+
+        </p>
+
+      </div>
+
+      <div>
+
+        <h4>Explore</h4>
+
+        <a href="#story">Our Story</a>
+
+        <a href="#branches">Branches</a>
+
+        <a href="#menu">Menu</a>
+
+      </div>
+
+      <div>
+
+        <h4>Follow</h4>
+
+        <a href="https://www.facebook.com/share/1Cp6n9mSFP/?mibextid=wwXIfr"
+
+           target="_blank">
+
+          Facebook
+
+        </a>
+
+        <a href="https://www.tiktok.com/@lahorerestaurantbkk"
+
+           target="_blank">
+
+          TikTok
+
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+
+      © 2026 Lahore Restaurant Bangkok. All rights reserved.
+
+    </div>
+
+  </div>
+
+</footer>
+
+<a class="floating-whatsapp"
+
+   href="https://wa.me/66818753034"
+
+   target="_blank"
+
+   aria-label="WhatsApp">
+
+  💬
+
+</a>
+
+</body>
+
+</html>
